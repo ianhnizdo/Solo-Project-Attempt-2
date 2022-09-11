@@ -15,7 +15,7 @@ app.use(cors());
 app.get('/heroes', )
 
 app.get('/', (req,res)=>{
-
+    return res.status(200).render('../client/Components/App')
 })
 
 app.listen(3000, ()=>{
