@@ -31,3 +31,22 @@ This bundles up ejected files into an index html file inside our source file. It
       },
 
       './client/stylesheets/styles.css'
+
+      command shift h to get relative path
+
+Okay finally got it working.
+
+Now I just have to figure out what the hell I need to load up.
+
+
+Lets get the front end rendering to give a login Page
+
+What do I want? I want to just get the loggin and logout functionality working first
+
+I should figure out how to connect to the database
+
+For the login what I will probably need to do is be able to access some database with cookies. These cookies or whatever will let me know if the login attempt is new or old.
+
+Based on that I will have to say whether to log in or not.
+
+So within the login function there needs to be a way to access state?
