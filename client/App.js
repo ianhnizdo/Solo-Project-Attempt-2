@@ -23,6 +23,7 @@ class App extends Component {
         return(
             <div>
                 <h1 className="Test-Header">Hello World</h1>
+                <Login />
             </div>
         )
     }

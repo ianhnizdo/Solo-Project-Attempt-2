@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react';
 
 // probably need an input of some kind. Do we pass in the username and password
 //as we load the page? No we would probably do it after
-Login=()=>{
+const Login=()=>{
 
 
     return(
