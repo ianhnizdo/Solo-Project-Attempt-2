@@ -34,7 +34,7 @@ module.exports = {
         }, 
         {
             test: /\.css$/i,
-            use: ["style-loader", "css-loader"],
+            use: ["style-loader", "css-loader", 'sass-loader'],
           },
            {
             test: /\.(png|jpg|gif|woff|woff2|eot|ttf|svg|ico)$/,
@@ -50,5 +50,8 @@ module.exports = {
         ],
       },
     ],
+    },
+    resolve: {
+      extensions: ['.js','.jsx','.json']
     },
 }

@@ -29,6 +29,7 @@ app.use(express.urlenconded({extended: true}));
 //Any folders inside of the client folder will be served up here.
 app.use(express.static(path.resolve(__dirname, '../client')));
 
+
 //Front end, onClick()=> fetch request, fetch request comes here and will look for a get, put, post etc.
 app.use('/api', apiRouter);
 
@@ -37,6 +38,7 @@ app.get('/', (req,res)=>{
     //index.html as opposed to App? The index.html is our web page, the App is the one building the webpage.
     return res.status(200).sendFile(path.resolve(__dirname, '../client/index.html'));
 })
+
 
 //http:localhost:3000/index.html
 

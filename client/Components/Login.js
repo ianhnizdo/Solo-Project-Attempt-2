@@ -10,10 +10,10 @@ const Login=()=>{
     return(
         <div className = "LoginPage">
         
-        <form className = "Login-Container">
-        <h1 className ="Login-Title">Fantasy World Choices</h1>
+        <form className = "Login-Container" method="POST" action="/login">
+        <h1 className ="Login-Title">Weather Station Connect</h1>
 
-            <label htmlFor="usernameLogin">Enter username
+            <label htmlFor="usernameLogin" >Enter username
             </label>
                 <input type="text" id="usernameLogin" size="50" required/>
             <label htmlFor="passwordLogin"> Enter Password
