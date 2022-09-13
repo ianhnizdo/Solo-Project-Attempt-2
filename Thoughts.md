@@ -50,3 +50,5 @@ For the login what I will probably need to do is be able to access some database
 Based on that I will have to say whether to log in or not.
 
 So within the login function there needs to be a way to access state?
+
+npm run dev, that should start nodemon

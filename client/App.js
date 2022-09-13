@@ -22,8 +22,8 @@ class App extends Component {
     render(){
         return(
             <div>
-                <h1 className="Test-Header">Hello World</h1>
-                <Login />
+                {/* <h1 className="Test-Header">Hello World</h1> */}
+                <Login className="Login-Page"/>
             </div>
         )
     }

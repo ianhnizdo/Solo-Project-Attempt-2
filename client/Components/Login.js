@@ -8,9 +8,20 @@ const Login=()=>{
 
 
     return(
-        <div>
-        <header>Majesty</header>
-        <p>hello why are you not rendering? Render something dammit.</p>
+        <div className = "LoginPage">
+        
+        <form className = "Login-Container">
+        <h1 className ="Login-Title">Fantasy World Choices</h1>
+
+            <label htmlFor="usernameLogin">Enter username
+            </label>
+                <input type="text" id="usernameLogin" size="50" required/>
+            <label htmlFor="passwordLogin"> Enter Password
+            </label>
+                <input type="password" id="passwordLogin" size="50" required/>
+            <button type="submit" className="btn btn-secondary">Submit</button>
+        </form>
+ 
         </div>
 
     )
