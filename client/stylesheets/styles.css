@@ -38,6 +38,66 @@
     text-align: center;
 }
 
+/* .Page-Links { */
+    /* height: 60px;
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    border-bottom: 5px;
+    background-color: hsla(120, 20%, 40%, 1.0);
+    border-radius : 50px; */
+/* } */
+
+.MainPage {
+    /* background: url(".//Users/elaschwartz/Documents/Codesmith Attempt 2/Solo Project/Solo-Project-Attempt-2/client/images/Ardania-map"); */
+}
+
+.Container {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+    gap: 12px;
+    opacity: 1;
+    /* background */
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    width: 50%;
+    top: 20%;
+    font-style: italic;
+    font-family: 'Courier New', Courier, monospace;
+    /* background-image: ; */
+    text-align: center;
+    border: 5px solid grey;
+    border-radius: 50px;
+    /* I wonder what that relative will do? */
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 20%;
+    right: 50%;
+}
+
+nav {
+    line-height: 1em;
+    text-decoration:none;
+    width: 100vw;
+    height: 60px;
+    margin: 20px;
+
+    position: sticky;
+    border-bottom: 5px;
+    background-color: hsla(120, 20%, 40%, 1.0);
+    border-radius : 50px;
+}
+
+.Page-Links{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+
 #usernameLogin{
 
 }

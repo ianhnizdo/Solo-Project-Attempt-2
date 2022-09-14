@@ -1,7 +1,7 @@
 
 import React, {Component} from "react";
 import Login from "./Components/Login"
-
+import MainScreen from "./Components/Main-Screen"
 import {Switch, Route } from 'react-router-dom';
 
 import './stylesheets/styles.css';
@@ -23,8 +23,9 @@ class App extends Component {
         return(
             <div>
                 {/* <h1 className="Test-Header">Hello World</h1> */}
-                <Login className="Login-Page"/>
-            </div>
+                {/* <Login className="Login-Page"/> */}
+                    <MainScreen className="Fantasy-Form" />
+                </div>
         )
     }
 }

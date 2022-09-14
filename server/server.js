@@ -13,21 +13,23 @@ const express = require('express');
 // const cors = require('cors');
 
 const app = express();
+const PORT = 3000;
 
 //What cors does is it secures our application on a domain level. The idea is it shouldn't be possible to access data from other domains.
 //we do this at an application-level so we don't have to do it ourselves for every route.
 // app.use(cors());
 
-//reads any request with req.body
+//reads any request with req.body. Request object gets parsed into json object.
 app.use(express.json());
+
 //reads any request with a form, html forms
-app.use(express.urlenconded({extended: true}));
+app.use(express.urlencoded({extended: true}));
 
 //handle request for static files
 //serving anything that is inside client
 //Without this we serve anything in our front end.
 //Any folders inside of the client folder will be served up here.
-app.use(express.static(path.resolve(__dirname, '../client')));
+// app.use(express.static(path.resolve(__dirname, '../client')));
 
 
 //Front end, onClick()=> fetch request, fetch request comes here and will look for a get, put, post etc.
@@ -56,7 +58,7 @@ app.use('*', (req, res) => {
   });
   
 
-app.listen(3000, ()=>{
+app.listen(PORT, ()=>{
     console.log('App listening on port 3000.'
     )
 })
