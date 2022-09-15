@@ -22,11 +22,11 @@ formController.getPerson = (req, res, next) => {
 
 formController.postForm = (req, res, next) => {
   console.log('this is the request', req.body);
-  const data = {};
-  const {Name, FantasyLikes, Passoword, World, Characters, Alternatives} = req.params;
-  const upload = new form(data)
-
-
+  const data = req.body;
+  console.log('the data is saved over', data);
+  form.create(data, function(err,small){
+    if(err) return {msg: "Error with formController.postForm"};
+  })
   //Do I need to specify the keys here? What do I need?
 }
 

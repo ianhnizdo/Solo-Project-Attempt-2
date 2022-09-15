@@ -1,13 +1,13 @@
 import React, {Component, useState, useEffect} from 'react';
-
-import { Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import { Outlet, Link } from 'react-router-dom';
 
 // import { BrowserRouter, Routes ,Route } from 'react-router-dom';
 import image from '../assets/images/Ardania-map.png'
 import celtic from '../assets/images/Celtic Knot Pattern.png'
-// import List from './List'
-// import Update from './Update'
-// import Delete from "./Delete"
+import  List from './List'
+import Update from './Update'
+import Delete from "./Delete"
 // import { render } from 'sass';
 
 
@@ -80,20 +80,27 @@ const MainScreen=()=>{
 
 
         <div className = "MainPage" style={{backgroundImage : `url(${image})`, backroundRepeat: "no-repeat", backgroundSize: "contain",}}>
+        
+
         <nav className="Main-Page-Bar">
             <div className="Page-Links" id="MainPage">
             <div className="link-div">
-                <a href="./List">Other People's Forms</a>
+                <Link to="List">Other People's Forms</Link>
+                {/* <a href="./List" onClick={List}>Other People's Forms</a> */}
             </div>
             <div className="link-div">
-                <a>Update Form</a>
+            <Link to="Update">Update Forms</Link>
+                {/* <a>Update Form</a> */}
             </div>
             <div className="link-div">
-                <a>Delete Forms</a>
+            <Link to="Delete">Delete Forms</Link>
+
+                {/* <a>Delete Forms</a> */}
             </div>
                 </div>
             {/* Other Peoples Choices!/ */}
         </nav>
+        
     
 {/* action="/form" method="POST" */}
 
@@ -108,7 +115,7 @@ const MainScreen=()=>{
             </label>
             <input className="input" value={Name} onChange={nameSetOnChange} id="Name" required/>
             <label htmlFor="FantasyLikes">
-            FantasyLikes
+            Do you like Fantasy Worlds?
             </label>
             <input className="input" value={FantasyLikes} onChange={likeOnChange} id="FantasyLikes" required/>
             <label htmlFor="Password">

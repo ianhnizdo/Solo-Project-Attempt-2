@@ -7,7 +7,7 @@ const uri = require('../../secrets');
 // }
 
 const MONGO_URI = uri.MONGO_URI;
-console.log(MONGO_URI);
+console.log('this is the mongoURI',MONGO_URI);
 // API_KEY yhlq2UiFy3MU5zWq1NhYvk6Db5ftMX8RetIqSxqLOyFjnZbDuzgwyKPx8vY0ZnNo
 
 mongoose
@@ -26,7 +26,7 @@ mongoose
 
 const peoplesForms = new Schema({
   Name: {type: String, required: true},
-  FantasyLikes: {type: Boolean, required: true},
+  FantasyLikes: {type: String, required: true},
   Password: {type: String, required: true},
   World: {type: String, required: this.FantasyLikes},
   Characters: {type: String, required: this.FantasyLikes},
@@ -38,7 +38,7 @@ const peoplesForms = new Schema({
 
 // const character = mongoose.model('character', characterSchema);
 
-const form = mongoose.model('Form', peoplesForms);
+const form = mongoose.model('peoplesworlds', peoplesForms);
 
 //This is mongo export, sql uses the query feature.
 // module.exports = character;
