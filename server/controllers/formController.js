@@ -21,7 +21,7 @@ formController.getPerson = (req, res, next) => {
 }
 
 formController.postForm = (req, res, next) => {
-  console.log(req);
+  console.log('this is the request', req.body);
   const data = {};
   const {Name, FantasyLikes, Passoword, World, Characters, Alternatives} = req.params;
   const upload = new form(data)
