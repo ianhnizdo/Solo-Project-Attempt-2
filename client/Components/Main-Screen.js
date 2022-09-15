@@ -85,15 +85,15 @@ const MainScreen=()=>{
         <nav className="Main-Page-Bar">
             <div className="Page-Links" id="MainPage">
             <div className="link-div">
-                <Link to="List">Other People's Forms</Link>
+                <Link to="List" element={<List />}>Fetch Form</Link>
                 {/* <a href="./List" onClick={List}>Other People's Forms</a> */}
             </div>
             <div className="link-div">
-            <Link to="Update">Update Forms</Link>
+            <Link to="Update" element={<Update />} >Update Forms</Link>
                 {/* <a>Update Form</a> */}
             </div>
             <div className="link-div">
-            <Link to="Delete">Delete Forms</Link>
+            <Link to="Delete" element={<Delete />}>Delete Forms</Link>
 
                 {/* <a>Delete Forms</a> */}
             </div>
@@ -134,8 +134,9 @@ const MainScreen=()=>{
             <input className="input" value={Alternatives} onChange={alternativeOnChange} id="Alternatives"/>
             <input type="Submit" onClick={()=>createInformation()} id="Post submission"/>
         </form>
-    </div>
- 
+        </div>
+        {/* You do need an Outlet here */}
+        <Outlet />
         </div>
         
     

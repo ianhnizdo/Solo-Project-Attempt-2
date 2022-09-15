@@ -1,16 +1,15 @@
 import React, { Component } from 'react';
-import { Routes ,Route } from 'react-router-dom';
 import image from '../assets/images/Ardania-map.png';
 import { Outlet, Link } from 'react-router-dom';
 import Main from './Main-Screen';
-import Update from './Update'
-// import Delete from "./Delete"
-import List from './List'
-import navBar from './Navbar'
+import  List from './List'
 
+import Delete from "./Delete"
 
-const Delete = () => {
+const navBar=()=>{
+    
     return(
+
         <div className = "MainPage" style={{backgroundImage : `url(${image})`, backroundRepeat: "no-repeat", backgroundSize: "contain",}}>
         
 
@@ -40,4 +39,4 @@ const Delete = () => {
     )
 }
 
-export default Delete;
+export default navBar;

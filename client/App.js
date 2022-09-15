@@ -1,8 +1,7 @@
 
 import React, {Component} from "react";
-// import Login from "./Components/Login"
 import MainScreen from "./Components/Main-Screen"
-// import { BrowserRouter } from 'react-router-dom';
+import { Outlet, Link} from "react-router-dom"
 
 import './stylesheets/styles.css';
 
@@ -25,6 +24,8 @@ class App extends Component {
                 {/* <h1 className="Test-Header">Hello World</h1> */}
                 {/* <Login className="Login-Page"/> */}
                     <MainScreen className="Fantasy-Form" />
+                {/* Do I need it just here or in some of the child components? */}
+                <Outlet />
                 </div>
         )
     }

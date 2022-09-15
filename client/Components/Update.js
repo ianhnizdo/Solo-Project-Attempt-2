@@ -1,4 +1,10 @@
 import React, { Component } from 'react';
+import image from '../assets/images/Ardania-map.png';
+import { Outlet, Link } from 'react-router-dom';
+import Main from './Main-Screen';
+import  List from './List'
+
+import Delete from "./Delete"
 
 const Update = () => {
     return(
@@ -6,20 +12,20 @@ const Update = () => {
     <nav className="Main-Page-Bar">
         <div className="Page-Links" id="MainPage">
         <div className="link-div">
-        <a onClick={console.log("this should go to other peoples forms")}>Other Peoples Choices!</a>
+        <Link to="Main" element={<Main />}>Main Page</Link>
         </div>
         <div className="link-div">
-        <a onClick={console.log("this should give you the chance to update your form")}>Update Form</a>
+        <Link to="List" element={<List />}>Fetch Form</Link>
         </div>
         <div className="link-div">
-        <a >Delete Form</a>
+        <Link to="Delete" element={<Delete />}>Delete</Link>
         </div>
         <div className="link-div">
             <a>Log Out</a>
         </div>
         </div>
     </nav>
-
+        <Outlet />
     </div>
 
 )
