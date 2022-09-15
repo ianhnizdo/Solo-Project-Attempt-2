@@ -14,11 +14,11 @@ root.render(
     <BrowserRouter>
     <Routes>
     <Route path='/' element={<App />}/>
-    <Route path='list' element={<List />}/>
-    <Route path='update' element={<Update />}/>
-    <Route path='delete' element={<Delete />}/>
+    <Route path='/list' element={<List />}/>
+    <Route path='/update' element={<Update />}/>
+    <Route path='/delete' element={<Delete />}/>
     {/* Could putting this here screw things up? */}
-    <Route path='main' element={<Main />}/>
+    <Route path='/main' element={<Main />}/>
     {/* wrong path */}
     <Route path="*" element={<main style={{padding: "1rem"}}>
         <p>There's nothing here!</p>

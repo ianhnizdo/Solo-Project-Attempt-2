@@ -3,7 +3,7 @@ import image from '../assets/images/Ardania-map.png';
 import { Outlet, Link } from 'react-router-dom';
 import Main from './Main-Screen';
 import  List from './List'
-
+//git checkout main, git checkout -b react-router-test
 import Delete from "./Delete"
 
 const navBar=()=>{

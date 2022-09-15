@@ -9,16 +9,16 @@ import Delete from "./Delete"
 const List = () => {
     return(
     <div className = "MainPage" style={{backgroundImage : `url(${image})`, backroundRepeat: "no-repeat", backgroundSize: "contain",}}>
-    <nav className="Main-Page-Bar">
+    <nav className="Nav-Bar">
         <div className="Page-Links" id="MainPage">
         <div className="link-div">
-        <Link to="Main" element={<Main />}>Main Page</Link>
+        <Link to="/main" element={<Main />}>Main Page</Link>
         </div>
         <div className="link-div">
-        <Link to="Update" element={<Update />} >Update Forms</Link>
+        <Link to="/update" element={<Update />} >Update Forms</Link>
         </div>
         <div className="link-div">
-        <Link to="Delete" element={<Delete />}>Delete Forms</Link>
+        <Link to="/delete" element={<Delete />}>Delete Forms</Link>
         </div>
         </div>
     </nav>
