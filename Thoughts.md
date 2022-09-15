@@ -70,3 +70,8 @@ What don't I understand. How on earth do I even begin to connect with some API?
 Take a look back at a unit in week 3. I believe its express.
 
 Maybe look at week 2 ajax calls too.
+
+
+Breaking it down to just a post request at this point. That totally broke me.
+
+Alright let me see. We want to use a Mongoose method

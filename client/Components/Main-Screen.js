@@ -1,28 +1,79 @@
-import React, {Component} from 'react';
-import React, {useState} from 'react';
+import React, {Component, useState, useEffect} from 'react';
+
 import { Link } from 'react-router-dom';
-import {useState, useEffect} from 'react';
+
 // import { BrowserRouter, Routes ,Route } from 'react-router-dom';
 import image from '../assets/images/Ardania-map.png'
 import celtic from '../assets/images/Celtic Knot Pattern.png'
-import List from './List'
-import Update from './Update'
-import Delete from "./Delete"
+// import List from './List'
+// import Update from './Update'
+// import Delete from "./Delete"
 // import { render } from 'sass';
 
 
 // probably need an input of some kind. Do we pass in the username and password
 //as we load the page? No we would probably do it after
 const MainScreen=()=>{
+   
+    const useInput = init => {
+        const [ value, setValue ] = useState(init);
+        const onChange = e => {
+          setValue(e.target.value);
+        };
+        // return the value with the onChange function instead of setValue function
+        return [ value, onChange ];
+      };
+    
+    const [Name, nameSetOnChange] = useInput('');
+    const [FantasyLikes, likeOnChange] = useInput('');
+    const [Password, passwordSet] = useInput('');
+    const [World, worldOnChange] = useInput('');
+    const [Character, characterOnChange] = useInput('');
+    const [Alternatives, alternativeOnChange] = useInput('');
 
-    const [intitial, postInformation] =React.useState({})
 
     //Now its time to figure out how to render the information in a function to be sent to the back end
     
-    function postInformation(information) {
-        console.log(information);
-    }
+    function createInformation() {
+        // const body = {};
+        // const arr = ['Name', 'Like', 'Password','World','Favorite Characters', 'Alternatives']
+        
+        // for(const [key,val] of arr.entries()){
+        //     // console.log(val);
+        //     body[val]=information[key].value
+        // }
+        // console.log(information);
+        const body = {
+            Name,
+            FantasyLikes,
+            Password,
+            World,
+            Character,
+            Alternatives
+        }
 
+        fetch('/api/form', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'Application/JSON'
+            },
+            body: JSON.stringify(body)
+          })
+            .then(resp => resp.json())
+            .then((data) => {
+              console.log(data);
+            })
+            // .then(() => {
+            //   props.history.push('/');
+            // })
+            .catch(err => console.log('CreateCharacter fetch /api/form: ERROR: ', err));
+        }
+
+
+        // console.log(body);
+        
+    
+// action="/form" method="POST"
 
     return(
         
@@ -44,36 +95,37 @@ const MainScreen=()=>{
             {/* Other Peoples Choices!/ */}
         </nav>
     
+{/* action="/form" method="POST" */}
 
     <div>
 
-        <form className = "Container border border-success" id="my-form" method="POST" action="/login" style={{backgroundImage : `url(${celtic})`, backroundRepeat: "no-repeat", backgroundSize: "contain", height: 700}}>
+        <form className = "Container border border-success" id="my-form" style={{backgroundImage : `url(${celtic})`, backroundRepeat: "no-repeat", backgroundSize: "contain", height: 700}}>
             <h1 className="Main-Page-Title">What Fantasy World Do You Like?</h1>
             
 
             <label htmlFor="Name">
             Name
             </label>
-            <input className="input" id="Name" required/>
+            <input className="input" value={Name} onChange={nameSetOnChange} id="Name" required/>
             <label htmlFor="FantasyLikes">
             FantasyLikes
             </label>
-            <input className="input" id="FantasyLikes" required/>
+            <input className="input" value={FantasyLikes} onChange={likeOnChange} id="FantasyLikes" required/>
             <label htmlFor="Password">
             Password
             </label>
-            <input className="input" id="Password" type="Password" required/>
+            <input className="input" id="Password" value={Password} onChange={passwordSet} type="Password" required/>
             <label htmlFor="World">
             World
             </label>
-            <input className="input" id="World"/>
+            <input className="input" value={World} onChange={worldOnChange} id="World"/>
             <label htmlFor="Favorite Characters">Favorite Characters
             </label>
-            <input className="input" id="Favorite Characters" required/>
+            <input className="input" value={Character} onChange={characterOnChange} id="Favorite Characters" required/>
             <label htmlFor="Alternatives"> Alternatives
             </label>
-            <input className="input" id="Alternatives"/>
-            <input type="Submit" onClick={()=>postInformation(document.getElementById("my-form"))} id="Post submission"/>
+            <input className="input" value={Alternatives} onChange={alternativeOnChange} id="Alternatives"/>
+            <input type="Submit" onClick={()=>createInformation()} id="Post submission"/>
         </form>
     </div>
  

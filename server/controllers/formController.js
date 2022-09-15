@@ -1,6 +1,9 @@
+const { Form } = require('react-router-dom');
 const form = require('../models/mongooseSchemas')
 
 const formController = {};
+
+
 
 formController.getPerson = (req, res, next) => {
     const name = req.
@@ -15,6 +18,16 @@ formController.getPerson = (req, res, next) => {
     .catch(err =>{
       return next({ log: 'Error with formController.getPerson', message : {err: 'Invalid character'}})
     })
+}
+
+formController.postForm = (req, res, next) => {
+  console.log(req);
+  const data = {};
+  const {Name, FantasyLikes, Passoword, World, Characters, Alternatives} = req.params;
+  const upload = new form(data)
+
+
+  //Do I need to specify the keys here? What do I need?
 }
 
 

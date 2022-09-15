@@ -25,7 +25,7 @@ const PORT = 3000;
 app.use(express.json());
 
 //reads any request with a form, html forms
-app.use(express.urlencoded({extended: true}));
+app.use(express.urlencoded({extended: false}));
 
 //handle request for static files
 //serving anything that is inside client
@@ -49,7 +49,7 @@ app.get('/', (req,res)=>{
 
 //catch-all
 app.use('*', (req, res) => {
-    res.status(444).send('Not Found');
+    res.status(404).send('Not Found');
 })
 
 /**
