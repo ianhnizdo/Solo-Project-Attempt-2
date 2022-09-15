@@ -12,13 +12,13 @@ const Update = () => {
     <nav className="Main-Page-Bar">
         <div className="Page-Links" id="MainPage">
         <div className="link-div">
-        <Link to="Main" element={<Main />}>Main Page</Link>
+        <Link to="/main" element={<Main />}>Main Page</Link>
         </div>
         <div className="link-div">
-        <Link to="List" element={<List />}>Fetch Form</Link>
+        <Link to="/list" element={<List />}>Fetch Form</Link>
         </div>
         <div className="link-div">
-        <Link to="Delete" element={<Delete />}>Delete</Link>
+        <Link to="/delete" element={<Delete />}>Delete</Link>
         </div>
         <div className="link-div">
             <a>Log Out</a>
