@@ -1,3 +1,9 @@
+label {
+    border: solid;
+    background-color: white;
+    font-weight: bold;
+}
+
 .Test-Header {
     background-color: aquamarine;
 }
@@ -50,21 +56,96 @@
 /* } */
 
 .MainPage {
-    background: url(".//Users/elaschwartz/Documents/Codesmith Attempt 2/Solo Project/Solo-Project-Attempt-2/client/images/Ardania-map");
+    border: solid;
+
+    z-index: 1;
+    height: 100vh;
+    image-rendering: auto;
 }
+
+
+nav {
+    line-height: 1em;
+    display: block;
+    text-decoration:none;
+    width: 100%;
+    height: 60px;
+    margin: 20px;
+    gap: 20%;
+    position: sticky;
+    border-bottom: 5px;
+    background-color: hsla(120, 20%, 40%, 1.0);
+    border-radius : 50px;
+    z-index: 2;
+}
+
+.Main-Page-Title {
+    background-color: white;
+    border-radius: 50px;
+}
+
+.Main-Page-Bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: row;
+    gap: 40px;
+}
+
+.Page-Links{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    /* border: solid; */
+    flex-wrap: nowrap;
+    padding: 20px;
+    margin: 16px;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.link-div{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    border: solid;
+    
+    /* border-radius: 50px; */
+}
+
+.Page-Links :hover{
+    background-color: lightblue;
+    /* color: white; */
+}
+
+
+#usernameLogin{
+    
+}
+
+#passwordLogin{
+    size: 40px;
+}
+
 
 .Container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 20%;
+    left: 25%;
+    width: 50%;
+    height: 100%;
     margin: 16px;
     gap: 12px;
     opacity: 1;
+    z-index: 4;
     /* background */
-    justify-content: center;
-    align-items: center;
-    height: 50%;
-    width: 50%;
-    top: 20%;
     font-style: italic;
     font-family: 'Courier New', Courier, monospace;
     /* background-image: ; */
@@ -73,35 +154,5 @@
     border-radius: 50px;
     /* I wonder what that relative will do? */
     position: relative;
-    top: 0;
-    bottom: 0;
-    left: 20%;
-    right: 50%;
-}
-
-nav {
-    line-height: 1em;
-    text-decoration:none;
-    width: 100vw;
-    height: 60px;
-    margin: 20px;
-
-    position: sticky;
-    border-bottom: 5px;
-    background-color: hsla(120, 20%, 40%, 1.0);
-    border-radius : 50px;
-}
-
-.Page-Links{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-
-#usernameLogin{
-
-}
-
-#passwordLogin{
-    size: 40px;
+    bottom: 50%;
 }

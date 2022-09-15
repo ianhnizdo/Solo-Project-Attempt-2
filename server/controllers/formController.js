@@ -3,11 +3,11 @@ const form = require('../models/mongooseSchemas')
 const formController = {};
 
 formController.getPerson = (req, res, next) => {
-  const {name} = req.params;
+    const name = req.
 
     form.findOne({Name: name})
     .then(data=>{
-      console.log(data);
+      console.log('findOne DB data: ', data);
       res.locals.character = data;
       console.log(res.locals.character);
       return next();

@@ -4,6 +4,8 @@
 //This brings in the path module
 const path = require('path');
 
+const mongoose = require('mongoose');
+
 const apiRouter = require('./routes/api');
 
 //This brings in the express module
@@ -19,7 +21,7 @@ const PORT = 3000;
 //we do this at an application-level so we don't have to do it ourselves for every route.
 // app.use(cors());
 
-//reads any request with req.body. Request object gets parsed into json object.
+//reads any request with req.body. Request object gets parsed into json object. Allows us to recieve information from the front end in json format.
 app.use(express.json());
 
 //reads any request with a form, html forms
@@ -31,6 +33,7 @@ app.use(express.urlencoded({extended: true}));
 //Any folders inside of the client folder will be served up here.
 // app.use(express.static(path.resolve(__dirname, '../client')));
 
+// app.use(apiRouter)
 
 //Front end, onClick()=> fetch request, fetch request comes here and will look for a get, put, post etc.
 app.use('/api', apiRouter);
@@ -46,12 +49,13 @@ app.get('/', (req,res)=>{
 
 //catch-all
 app.use('*', (req, res) => {
-    res.status(404).send('Not Found');
+    res.status(444).send('Not Found');
 })
 
 /**
  * Global error handler
  */
+
  app.use((err, req, res, next) => {
     console.log(err);
     res.status(500).send({ error: err });

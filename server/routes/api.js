@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 //This grabs the router module that we installed
 const uri = "mongodb://localhost:8080/"
+
 const router = express.Router();
 
 //import characterController
@@ -21,7 +22,10 @@ const formController = require('../controllers/formController');
 
 //Two inputs to get hero or monster
 
-
+// router.get('/', (req, res) => {
+//   console.log('hello from root!');
+//   return res.status(200).send('hello!');
+// });
 
 // post request
 //This should be below the '/signup'?
@@ -29,7 +33,10 @@ const formController = require('../controllers/formController');
 //     return res.status(200).json(res.locals.form);
 // })
 
-router.get('/find/:name', formController.getPerson, (req,res)=>{
+router.get('/find/:name', 
+  formController.getPerson, 
+ (req,res)=>{
+    console.log('im in the router.get api.js')
     return res.status(200).json('test successful');
     //res.locals.character
 })

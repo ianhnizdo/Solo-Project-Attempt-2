@@ -1,8 +1,7 @@
 
 import React, {Component} from "react";
-import Login from "./Components/Login"
+// import Login from "./Components/Login"
 import MainScreen from "./Components/Main-Screen"
-import {Switch, Route } from 'react-router-dom';
 
 import './stylesheets/styles.css';
 

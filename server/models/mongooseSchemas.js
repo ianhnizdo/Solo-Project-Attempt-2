@@ -7,6 +7,7 @@ const uri = require('../../secrets');
 // }
 
 const MONGO_URI = uri.MONGO_URI;
+console.log(MONGO_URI);
 // API_KEY yhlq2UiFy3MU5zWq1NhYvk6Db5ftMX8RetIqSxqLOyFjnZbDuzgwyKPx8vY0ZnNo
 
 mongoose
@@ -37,7 +38,7 @@ const peoplesForms = new Schema({
 
 // const character = mongoose.model('character', characterSchema);
 
-const form = mongoose.model('form', peoplesForms);
+const form = mongoose.model('Form', peoplesForms);
 
 //This is mongo export, sql uses the query feature.
 // module.exports = character;
