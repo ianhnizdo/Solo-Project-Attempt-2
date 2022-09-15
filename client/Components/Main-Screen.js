@@ -8,8 +8,7 @@ import celtic from '../assets/images/Celtic Knot Pattern.png'
 import  List from './List'
 import Update from './Update'
 import Delete from "./Delete"
-// import { render } from 'sass';
-
+import Navbar from './Navbar'
 
 // probably need an input of some kind. Do we pass in the username and password
 //as we load the page? No we would probably do it after
@@ -79,28 +78,8 @@ const MainScreen=()=>{
         
 
 
-        <div className = "MainPage" style={{backgroundImage : `url(${image})`, backroundRepeat: "no-repeat", backgroundSize: "contain",}}>
-        
-
-        <nav className="Main-Page-Bar">
-            <div className="Page-Links" id="MainPage">
-            <div className="link-div">
-                <Link to="/list" element={<List />}>Fetch Form</Link>
-                {/* <a href="./List" onClick={List}>Other People's Forms</a> */}
-            </div>
-            <div className="link-div">
-            <Link to="/update" element={<Update />} >Update Forms</Link>
-                {/* <a>Update Form</a> */}
-            </div>
-            <div className="link-div">
-            <Link to="/delete" element={<Delete />}>Delete Forms</Link>
-
-                {/* <a>Delete Forms</a> */}
-            </div>
-                </div>
-            {/* Other Peoples Choices!/ */}
-        </nav>
-        
+        <div className = "DisplayedPage" style={{backgroundImage : `url(${image})`, backroundRepeat: "no-repeat", backgroundSize: "contain",}}>
+        <Navbar />
     
 {/* action="/form" method="POST" */}
 
