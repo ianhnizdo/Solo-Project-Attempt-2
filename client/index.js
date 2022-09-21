@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM, { render } from "react-dom/client"
 import { BrowserRouter, Routes ,Route} from 'react-router-dom';
 import App from './App'
-import List from './Components/Delete'
+import List from './Components/List'
 import Delete from './Components/Delete'
 import Update from './Components/Update'
 import Main from './Components/Main-Screen'

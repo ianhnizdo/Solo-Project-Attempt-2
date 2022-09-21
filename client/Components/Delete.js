@@ -11,7 +11,7 @@ import Navbar from './Navbar'
 
 const Delete = () => {
     return(
-        <div className = "DisplayedPage" style={{backgroundImage : `url(${image})`, backroundRepeat: "no-repeat", backgroundSize: "contain",}}>
+        <div className = "DisplayedPage" style={{backgroundImage : `url(${image})`, backroundRepeat: "no-repeat", backgroundSize: "contain", height:1000}}>
             <Navbar />
         </div>
     )

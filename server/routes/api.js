@@ -10,6 +10,11 @@ const router = express.Router();
 //import characterController
 const formController = require('../controllers/formController');
 
+// router.get('/', formController.getForms, (req,res)=>{
+//     return res.status(200).json(res.locals.characters);
+// })
+
+
 // get request
 //We need /:name
 //saved in req.params.name

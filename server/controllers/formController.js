@@ -20,6 +20,8 @@ formController.getPerson = (req, res, next) => {
     })
 }
 
+formController.getForms = 
+
 formController.postForm = (req, res, next) => {
   console.log('this is the request', req.body);
   const data = req.body;

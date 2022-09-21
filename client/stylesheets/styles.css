@@ -59,7 +59,7 @@ label {
     border: solid;
 
     z-index: 1;
-    height: 100vh;
+    height: 100%;
     image-rendering: auto;
 }
 
@@ -77,6 +77,11 @@ nav {
     background-color: hsla(120, 20%, 40%, 1.0);
     border-radius : 50px;
     z-index: 2;
+}
+
+h1 {
+    background-color: white;
+    border-radius: 50px;
 }
 
 .Main-Page-Title {
@@ -123,14 +128,6 @@ nav {
 }
 
 
-#usernameLogin{
-    
-}
-
-#passwordLogin{
-    size: 40px;
-}
-
 
 .Container {
     display: flex;
@@ -140,7 +137,8 @@ nav {
     top: 20%;
     left: 25%;
     width: 50%;
-    height: 100%;
+    bottom: 20%;
+    height: 100vw;
     margin: 16px;
     gap: 12px;
     opacity: 1;
